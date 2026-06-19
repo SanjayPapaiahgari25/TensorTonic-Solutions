@@ -1,5 +1,5 @@
 -- Write your SQL query here
 SELECT name, salary
 FROM employees
-WHERE (department='Engineering' OR department='Marketing')
+WHERE department IN ('Engineering','Marketing')
 AND salary > 70000
