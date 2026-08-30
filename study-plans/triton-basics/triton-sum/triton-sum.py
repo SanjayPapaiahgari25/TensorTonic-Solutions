@@ -11,9 +11,9 @@ def sum_kernel(x_ptr, out_ptr, n, BLOCK_SIZE: tl.constexpr):
     mask = offsets < n
 
     x = tl.load(x_ptr + offsets, mask=mask, other=0.0)
-    out = tl.sum(x)
+    block_sum = tl.sum(x)
 
-    tl.atomic_add(out_ptr, out)
+    tl.atomic_add(out_ptr, block_sum)
 
 
 def solve(x: torch.Tensor, out: torch.Tensor) -> None:
