@@ -6,9 +6,9 @@ def lbfgs_direction(grad: list, s_list: list, y_list: list) -> list:
     """
     m = len(s_list)
 
-    q = np.asarray(grad, dtype=float)
-    s_list = np.asarray(s_list, dtype=float)
-    y_list = np.asarray(y_list, dtype=float)
+    q = np.asarray(grad)
+    s_list = np.asarray(s_list)
+    y_list = np.asarray(y_list)
 
     rho = np.zeros(m)
     alpha = np.zeros(m)
