@@ -13,9 +13,6 @@ def gru_cell_forward(x: list, h_prev: list, params: dict) -> np.ndarray:
     params = {k: np.asarray(v) for k, v in params.items()}
     z_t = _sigmoid(x@params["Wz"] + h_prev@params["Uz"] + params["bz"])
     r_t = _sigmoid(x@params["Wr"] + h_prev@params["Ur"] + params["br"])
-    print(z_t.shape)
-    print(r_t.shape)
     h_candidate = np.tanh(x@params["Wh"] + (r_t*h_prev)@params["Uh"] + params["bh"])
-    print(h_candidate.shape)
     h = ((1-z_t)*h_prev) + z_t*h_candidate
     return h
