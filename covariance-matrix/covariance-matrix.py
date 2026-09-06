@@ -1,0 +1,13 @@
+import numpy as np
+
+def covariance_matrix(X: list) -> np.ndarray:
+    """
+    Returns the covariance matrix as a NumPy array.
+    """
+    # Write code here
+    X = np.asarray(X)
+
+    X_c = X - np.mean(X, axis=0)
+
+    N = X.shape[0]
+    return (X_c.T @ X_c)/(N - 1)
