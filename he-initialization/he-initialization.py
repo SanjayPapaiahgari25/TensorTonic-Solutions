@@ -1,4 +1,5 @@
 import math
+import numpy as np
 
 def he_initialization(W: list, fan_in: int) -> list:
     """
@@ -6,9 +7,6 @@ def he_initialization(W: list, fan_in: int) -> list:
     """
     # Write code here
     L = math.sqrt(6/fan_in)
-    m, n = len(W), len(W[0])
-    for i in range(m):
-        for j in range(n):
-            W[i][j] = (W[i][j]*2*L) - L
+    W = np.asarray(W)
 
-    return W
+    return ((W*2*L) - L)
