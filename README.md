@@ -30,7 +30,7 @@ Verified machine learning implementations completed on [TensorTonic](https://www
 | Implement Contrastive Loss (Siamese) | Implement Siamese-network contrastive loss using pair labels, embedding distances, and a separation margin. | https://www.tensortonic.com/problems/contrastive-loss |
 | Cosine Annealing LR Scheduler | Compute a cosine-annealed learning rate between configured maximum and minimum values across training steps. | https://www.tensortonic.com/problems/cosine-annealing-lr |
 | Cosine Embedding Loss | Compute cosine embedding loss for similar and dissimilar vector pairs using labels and a configurable margin. | https://www.tensortonic.com/problems/cosine-embedding-loss |
-| Implement Cosine Similarity | Compute cosine similarity between NumPy vectors with dot products, Euclidean norms, and zero-vector handling. | https://www.tensortonic.com/problems/cosine-similarity |
+| Implement Cosine Similarity | Implement cosine similarity from scratch with NumPy. Covers dot products, Euclidean norms and zero-vector handling, with tests in the browser. | https://www.tensortonic.com/problems/cosine-similarity |
 | Compute Covariance Matrix | Compute a sample covariance matrix from centered observations, preserving feature-to-feature relationships. | https://www.tensortonic.com/problems/covariance-matrix |
 | Implement Cross-Entropy Loss | Compute multiclass cross-entropy loss from class probabilities and integer labels with stable logarithms. | https://www.tensortonic.com/problems/cross-entropy-loss |
 | Implement Dice Loss | Compute Dice loss for segmentation predictions using overlap, total mass, and a numerical smoothing term. | https://www.tensortonic.com/problems/dice-loss |
@@ -40,15 +40,15 @@ Verified machine learning implementations completed on [TensorTonic](https://www
 | Implement Euclidean Distance | Compute Euclidean distance between equal-length NumPy vectors as the square root of summed squared differences. | https://www.tensortonic.com/problems/euclidean-distance |
 | Expected Value (Discrete Distribution) | Compute the expected value of a discrete distribution from matched outcomes and normalized probabilities. | https://www.tensortonic.com/problems/expected-value-discrete |
 | Implement Focal Loss | Compute mean binary focal loss from predicted probabilities using a configurable focusing parameter. | https://www.tensortonic.com/problems/focal-loss |
-| Implement GELU Activation (Gaussian Error Linear Unit) | Implement the Gaussian Error Linear Unit activation element-wise using the required GELU approximation. | https://www.tensortonic.com/problems/gelu |
+| Implement GELU Activation (Gaussian Error Linear Unit) | Implement the exact Gaussian Error Linear Unit activation element-wise with the erf function, with the formula and tests in the browser. | https://www.tensortonic.com/problems/gelu |
 | Gradient Clipping (Global Norm) | Clip a NumPy gradient array by its global L2 norm while preserving direction when scaling is required. | https://www.tensortonic.com/problems/gradient-clipping |
 | Implement Gradient Descent for a 1D Quadratic | Optimize a one-dimensional quadratic with iterative gradient descent and return the parameter trajectory. | https://www.tensortonic.com/problems/gradient-descent-quadratic |
 | Build a Mini GRU Cell (Forward Pass) | Implement a GRU cell forward pass with reset, update, and candidate gates for one sequence timestep. | https://www.tensortonic.com/problems/gru-cell-forward |
-| He Initialization | Scale raw weights into the He uniform range using a bound derived from the layer fan-in. | https://www.tensortonic.com/problems/he-initialization |
+| He Initialization | Implement He weight initialization from scratch in NumPy. See the formula, why fan-in scaling matters, and test your code in the browser. | https://www.tensortonic.com/problems/he-initialization |
 | Implement Hinge Loss (Binary SVM) | Compute binary SVM hinge loss from signed labels and prediction scores using the required margin. | https://www.tensortonic.com/problems/hinge-loss |
 | Implement Huber Loss | Compute Huber loss with quadratic errors near zero and linear penalties beyond a configurable threshold. | https://www.tensortonic.com/problems/huber-loss |
 | Implement InfoNCE Loss | Compute InfoNCE contrastive loss from query and key embeddings using temperature-scaled similarities. | https://www.tensortonic.com/problems/info-nce-loss |
-| Implement KL Divergence | Compute Kullback-Leibler divergence between discrete probability distributions with safe zero-probability handling. | https://www.tensortonic.com/problems/kl-divergence |
+| Implement KL Divergence | Compute Kullback-Leibler divergence between discrete distributions in NumPy, with safe handling of zero probabilities and tests in the browser. | https://www.tensortonic.com/problems/kl-divergence |
 | Implement Cosine Similarity | Compute cosine similarity between NumPy vectors with explicit handling for zero-norm inputs. | https://www.tensortonic.com/problems/la-cosine-similarity |
 | Implement Dot Product | Compute the algebraic dot product and geometric angle relationship for two equal-length NumPy vectors. | https://www.tensortonic.com/problems/la-dot-product |
 | Implement Euclidean Distance | Compute Euclidean distance between equal-length NumPy vectors from the square root of summed squared differences. | https://www.tensortonic.com/problems/la-euclidean-distance |
@@ -93,7 +93,7 @@ Verified machine learning implementations completed on [TensorTonic](https://www
 | Inspect DataFrame Shape | Create a DataFrame and return its structural properties: row count, column count, column names, data types, and total number of values. | https://www.tensortonic.com/problems/pandas-inspect-shape |
 | Create DataFrame from Dict | Create a pandas DataFrame from dictionary data and report its records, shape, and ordered column names. | https://www.tensortonic.com/problems/pandas-read-csv |
 | Percent Change | Compute period-over-period percentage changes in a numeric time series with defined initial-value handling. | https://www.tensortonic.com/problems/percent-change |
-| Precision and Recall at K | Compute recommendation precision and recall at K by comparing ranked predictions with relevant items. | https://www.tensortonic.com/problems/precision-recall-at-k |
+| Precision and Recall at K | Compute precision@K and recall@K for recommendation systems by comparing ranked predictions with relevant items, with tests in the browser. | https://www.tensortonic.com/problems/precision-recall-at-k |
 | Mean, Median, Mode | Compute mean, median, and a deterministically selected mode for a one-dimensional numeric sample. | https://www.tensortonic.com/problems/probstat-mean-median-mode |
 | Basic Autograd | Use PyTorch autograd to evaluate a scalar function and return its derivative at every supplied input value. | https://www.tensortonic.com/problems/pytorch-basic-autograd |
 | Tensor Operations | Perform common element-wise and matrix tensor operations: add, multiply, matmul, power, and max. | https://www.tensortonic.com/problems/pytorch-tensor-arithmetic |
@@ -113,9 +113,10 @@ Verified machine learning implementations completed on [TensorTonic](https://www
 | INNER JOIN | Join employees to matching departments with SQL INNER JOIN and return employee name, salary, and department. | https://www.tensortonic.com/problems/sql-inner-join |
 | LEFT JOIN | Use SQL LEFT JOIN to include every customer and calculate total spending, returning zero for customers without orders. | https://www.tensortonic.com/problems/sql-left-join |
 | LIMIT and OFFSET | Use SQL ORDER BY, LIMIT, and OFFSET to return the second through fourth highest-revenue sales with tie-breaking. | https://www.tensortonic.com/problems/sql-limit-offset |
+| Multiple Joins | Join users, experiment assignments, and conversion events in SQL to report converted users, variants, and revenue. | https://www.tensortonic.com/problems/sql-multiple-joins |
 | ORDER BY | Sort student exam results in SQL by descending score and ascending name for deterministic ties. | https://www.tensortonic.com/problems/sql-order-by |
 | WHERE Clauses | Filter employees by department and salary with SQL WHERE conditions, returning only qualifying names and salaries. | https://www.tensortonic.com/problems/sql-where-clauses |
-| Implement Swish Activation | Apply the Swish activation element-wise by multiplying each input by its sigmoid value. | https://www.tensortonic.com/problems/swish-activation |
+| Implement Swish Activation | Apply the Swish activation element-wise in NumPy by multiplying each input by its sigmoid, computed without overflow. | https://www.tensortonic.com/problems/swish-activation |
 | Implement Tanh Activation | Implement the hyperbolic tangent activation element-wise with outputs bounded between minus one and one. | https://www.tensortonic.com/problems/tanh-activation |
 | Text Chunking | Split text into ordered chunks under the requested size and overlap rules without dropping content. | https://www.tensortonic.com/problems/text-chunking |
 | Implement Triplet Loss | Compute triplet loss from anchor, positive, and negative embeddings using distances and a margin. | https://www.tensortonic.com/problems/triplet-loss |
@@ -127,7 +128,7 @@ Verified machine learning implementations completed on [TensorTonic](https://www
 | Vector Sum Reduction | Implement tiled vector sum reduction in Triton with register partials, atomic accumulation, and masked tail lanes. | https://www.tensortonic.com/problems/triton-sum |
 | Vector Addition | Implement elementwise vector addition in Triton with contiguous program tiles and safe masking for partial tails. | https://www.tensortonic.com/problems/triton-vector-addition |
 | Warmup + Linear Decay LR Schedule | Compute a learning-rate schedule with linear warmup followed by linear decay across training steps. | https://www.tensortonic.com/problems/warmup-decay-lr |
-| Implement Wasserstein Critic Loss | Compute Wasserstein critic loss as the difference between mean fake and real critic scores. | https://www.tensortonic.com/problems/wasserstein-critic-loss |
+| Implement Wasserstein Critic Loss | Compute the WGAN critic loss as the difference between mean fake and real critic scores, with the formula and tests in the browser. | https://www.tensortonic.com/problems/wasserstein-critic-loss |
 | Word Count Dictionary | Count token occurrences in text and return a dictionary mapping each distinct word to its frequency. | https://www.tensortonic.com/problems/word-count-dict |
 | Xavier Initialization | Scale raw weights into the Xavier uniform range using a bound derived from fan-in and fan-out. | https://www.tensortonic.com/problems/xavier-initialization |
 | RNN Cell | Implement an Elman RNN cell that combines the current input and previous hidden state before applying tanh. | https://www.tensortonic.com/research/rnn/rnn-cell |
